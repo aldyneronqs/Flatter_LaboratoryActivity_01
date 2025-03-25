@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project01/signup_AAR.dart';
 import 'Page1_AAR.dart';
 import 'Page2_AAR.dart';
+import 'signup_AAR.dart';
 
 class HomePage_AAR extends StatelessWidget {
   @override
@@ -47,6 +49,23 @@ class HomePage_AAR extends StatelessWidget {
                 ),
 
               child: Text('Go to Page 2'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () 
+              {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                );
+              },
+              
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.white,
+                ),
+
+              child: Text('Sign Up'),
             ),
           ],
         ),

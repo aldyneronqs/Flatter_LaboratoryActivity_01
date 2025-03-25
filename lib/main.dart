@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'homepage_AAR.dart';
+import 'signup_AAR.dart';
 
 void main() {
   runApp(
@@ -94,6 +95,23 @@ class _LoginFormState extends State<LoginForm> {
                 ),
                 child: Text('Login'),
               ),
+              SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () 
+              {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                );
+              },
+              
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.white,
+                ),
+
+              child: Text('Sign Up'),
+            ),
               ]
     );
   }
